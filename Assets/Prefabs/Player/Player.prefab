@@ -59,7 +59,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6503347243615366634}
   - component: {fileID: 4881044428167353028}
-  - component: {fileID: 8468159069176461558}
+  - component: {fileID: 2303914604460337537}
   - component: {fileID: 5924844455834432622}
   - component: {fileID: 1428796723582493991}
   m_Layer: 0
@@ -148,8 +148,8 @@ MonoBehaviour:
   m_DefaultActionMap: Walk
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!61 &8468159069176461558
-BoxCollider2D:
+--- !u!58 &2303914604460337537
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -183,17 +183,7 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
 --- !u!50 &5924844455834432622
 Rigidbody2D:
   serializedVersion: 5
@@ -233,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ff770c6c0f3f2f4b812a975906953bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed_: 7
+  walk_speed_: 6
 --- !u!1 &7667299644477940873
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,9 +235,10 @@ GameObject:
   - component: {fileID: 4843199124434070640}
   - component: {fileID: 7856326221587266516}
   - component: {fileID: 2816236729201741541}
+  - component: {fileID: 288565331580782851}
   m_Layer: 0
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -310,7 +301,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 22233d380e764774890b8dd67ce63990, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -368,6 +359,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &288565331580782851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7667299644477940873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9fb5b24a7219b448364c98ef5f1d85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage_data_: {fileID: 11400000, guid: 3d90a9e8870e9b948bdcea007667ae8b, type: 2}
+  knockback_source_transform_: {fileID: 6503347243615366634}
 --- !u!1 &8073767272690908490
 GameObject:
   m_ObjectHideFlags: 0
