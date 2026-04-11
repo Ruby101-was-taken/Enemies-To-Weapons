@@ -17,6 +17,8 @@ namespace Enemy {
 
         private bool can_spawn_ = true;
 
+        private int wave_ = 1;
+
         private IEnumerator SpawnEnemy(int enemies_to_spawn) {
             can_spawn_ = false;
             for(int i = 0; i < enemies_to_spawn; i++) {
@@ -25,11 +27,12 @@ namespace Enemy {
             }
             yield return new WaitForSeconds(10f);
             can_spawn_ = true;
+            wave_++;
         }
 
         private void FixedUpdate() {
             if(can_spawn_)
-                StartCoroutine(SpawnEnemy(3));
+                StartCoroutine(SpawnEnemy(wave_+3));
         }
     }
 }
