@@ -4,6 +4,10 @@ using UnityEngine;
 namespace Movememnt {
     public class MovementBehaviour : MonoBehaviour, ICanStopMoving {
 
+        [Header("Movement Behaviour")]
+        [SerializeField]
+        private float knockback_time_ = 0.25f;
+
         private bool can_move_ = true;
 
         public bool Can_move_ { get => can_move_; }
@@ -17,7 +21,7 @@ namespace Movememnt {
         }
 
         private IEnumerator WaitToStartMoving() {
-            yield return new WaitForSeconds(0.25f);
+            yield return new WaitForSeconds(knockback_time_);
             StartMoving();
         }
 
@@ -26,7 +30,7 @@ namespace Movememnt {
 
         protected Rigidbody2D rb_;
 
-        private void Awake() {
+        protected virtual void Awake() {
             rb_ = GetComponent<Rigidbody2D>();
         }
     }

@@ -198,6 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abdc96e0bd0dea14598baca927e0af21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockback_time_: 0.25
   walk_speed_: 3
 --- !u!114 &7432096725558553504
 MonoBehaviour:
@@ -215,3 +216,4 @@ MonoBehaviour:
   damaging_tags_:
   - PlayerAttack
   movement_: {fileID: 1462907727119831958}
+  spawn_on_death_: {fileID: 1145374626674922272, guid: 67fe24681ac94544cbd9bfce244e0f52, type: 3}
