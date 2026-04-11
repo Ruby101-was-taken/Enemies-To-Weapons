@@ -9,6 +9,8 @@ namespace Health {
 
         [SerializeField]
         private float health_ = 1f;
+        [SerializeField]
+        private float knockback_multiplier_ = 1f;
 
         [SerializeField]
         private List<string> damaging_tags_ = new List<string>();
@@ -54,7 +56,7 @@ namespace Health {
 
         private void OnHit(DamageContext damage_context) {
             on_hit_event_.Invoke();
-            rb_.linearVelocity = damage_context.knock_back_;
+            rb_.linearVelocity = damage_context.knock_back_* knockback_multiplier_;
             movement_.StopMoving();
         }
 

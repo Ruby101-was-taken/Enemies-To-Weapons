@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PlayerDamageData
   m_EditorClassIdentifier: 
   strength_: 1
-  knock_back_power_: 30
+  knock_back_power_: 15

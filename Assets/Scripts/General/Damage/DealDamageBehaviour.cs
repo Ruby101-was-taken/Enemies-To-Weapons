@@ -8,6 +8,8 @@ namespace Damage {
         [SerializeField]
         private Transform knockback_source_transform_;
 
+        public Transform Knockback_source_transform_ { get => knockback_source_transform_;  }
+
         public DamageContext GetDamageContext(Vector3 position) {
             return new DamageContext(damage_data_.strength_, damage_data_.knock_back_power_, (position - knockback_source_transform_.position).normalized);
         }
