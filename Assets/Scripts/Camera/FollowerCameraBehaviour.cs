@@ -8,16 +8,20 @@ namespace Player_Camera {
 
         [SerializeField]
         private float max_x_distance_ = 15f;
+        [SerializeField]
+        private float min_x_distance_ = -2f;
 
 
         // Update is called once per frame
         void Update() {
             Vector3 target_pos = follow_target_.transform.position;
-            Vector3 target_camera_pos = new Vector3(target_pos.x, target_pos.y, -10);
+            Vector3 target_camera_pos = new Vector3(target_pos.x, 0, -10);
             transform.position = Vector3.Lerp(transform.position, target_camera_pos, Time.deltaTime*3);
             if(transform.position.x > max_x_distance_)
                 transform.position = new Vector3(max_x_distance_, transform.position.y, transform.position.z);
-            
+            else if(transform.position.x < min_x_distance_)
+                transform.position = new Vector3(min_x_distance_, transform.position.y, transform.position.z);
+
         }
     }
 }
