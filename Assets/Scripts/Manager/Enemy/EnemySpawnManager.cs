@@ -6,6 +6,10 @@ namespace Enemy {
     public class EnemySpawnManager : MonoBehaviour {
 
         [SerializeField]
+        private float horizontal_position_ = 35f;
+        [SerializeField]
+        private float horizontal_bounds_ = 5f;
+        [SerializeField]
         private float vertical_bounds_ = 11f;
 
         [SerializeField]
@@ -16,7 +20,7 @@ namespace Enemy {
         private IEnumerator SpawnEnemy(int enemies_to_spawn) {
             can_spawn_ = false;
             for(int i = 0; i < enemies_to_spawn; i++) {
-                transform.position = new Vector3(transform.position.x, Random.Range(-vertical_bounds_, vertical_bounds_));
+                transform.position = new Vector3(horizontal_position_ + Random.Range(-horizontal_bounds_, horizontal_bounds_), Random.Range(-vertical_bounds_, vertical_bounds_));
                 Instantiate(spawnable_enemies_[Random.Range(0, spawnable_enemies_.Count)], transform.position, transform.rotation);
             }
             yield return new WaitForSeconds(10f);
