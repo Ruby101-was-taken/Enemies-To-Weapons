@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.009897232, a: 1}
+  m_Sprite: {fileID: 585679349008182817, guid: b069e6525bbd23d40a0e47047907b50a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -213,7 +213,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health_: 3
+  knockback_multiplier_: 1
   damaging_tags_:
   - PlayerAttack
+  solid_damaging_tags_: []
   movement_: {fileID: 1462907727119831958}
   spawn_on_death_: {fileID: 1145374626674922272, guid: 67fe24681ac94544cbd9bfce244e0f52, type: 3}
+  on_hit_event_:
+    m_PersistentCalls:
+      m_Calls: []
+  on_death_event_:
+    m_PersistentCalls:
+      m_Calls: []
+  spawn_invincibility_time_: 0.5
