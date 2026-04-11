@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &627469821043516864
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2749623041122080383, guid: 92c2b49deb3fb8144967fbab33c23886, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -677169109488044968, guid: 15fd242001252914896ba7d86692b359, type: 3}
+    - target: {fileID: 4013903376192065199, guid: 92c2b49deb3fb8144967fbab33c23886, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013903376192065199, guid: 92c2b49deb3fb8144967fbab33c23886, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013903376192065199, guid: 92c2b49deb3fb8144967fbab33c23886, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013903376192065199, guid: 92c2b49deb3fb8144967fbab33c23886, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013903376192065199, guid: 92c2b49deb3fb8144967fbab33c23886, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013903376192065199, guid: 92c2b49deb3fb8144967fbab33c23886, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013903376192065199, guid: 92c2b49deb3fb8144967fbab33c23886, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013903376192065199, guid: 92c2b49deb3fb8144967fbab33c23886, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013903376192065199, guid: 92c2b49deb3fb8144967fbab33c23886, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013903376192065199, guid: 92c2b49deb3fb8144967fbab33c23886, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972727221099980696, guid: 92c2b49deb3fb8144967fbab33c23886, type: 3}
+      propertyPath: m_Name
+      value: SlugEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432096725558553504, guid: 92c2b49deb3fb8144967fbab33c23886, type: 3}
+      propertyPath: movement_
+      value: 
+      objectReference: {fileID: 7500938382360405356}
+    - target: {fileID: 7432096725558553504, guid: 92c2b49deb3fb8144967fbab33c23886, type: 3}
+      propertyPath: spawn_on_death_
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1462907727119831958, guid: 92c2b49deb3fb8144967fbab33c23886, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5972727221099980696, guid: 92c2b49deb3fb8144967fbab33c23886, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 7500938382360405356}
+  m_SourcePrefab: {fileID: 100100000, guid: 92c2b49deb3fb8144967fbab33c23886, type: 3}
+--- !u!1 &4112370521638584648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3577876022334186632, guid: 92c2b49deb3fb8144967fbab33c23886, type: 3}
+  m_PrefabInstance: {fileID: 627469821043516864}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6509491161796428376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5972727221099980696, guid: 92c2b49deb3fb8144967fbab33c23886, type: 3}
+  m_PrefabInstance: {fileID: 627469821043516864}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7500938382360405356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6509491161796428376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dcba12bef70e9b42a8d0ccd64e5c042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockback_time_: 0.25
+  walk_speed_: 3
+  sprite_: {fileID: 4112370521638584648}
+  slide_scale_: 5

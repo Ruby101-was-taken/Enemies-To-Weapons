@@ -8,7 +8,8 @@ namespace Movememnt {
         [SerializeField]
         private float knockback_time_ = 0.25f;
 
-        private bool can_move_ = true;
+
+        protected bool can_move_ = true;
 
         public bool Can_move_ { get => can_move_; }
 

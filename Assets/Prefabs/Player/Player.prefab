@@ -143,6 +143,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 2b84a11b-4ed9-4c53-9224-4a5dbd90e78c
     m_ActionName: 'Walk/Attack[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1428796723582493991}
+        m_TargetAssemblyTypeName: Player.PlayerWalkBehaviour, Assembly-CSharp
+        m_MethodName: DashInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7b62f62d-000a-4d6c-b78b-470ecd372093
+    m_ActionName: 'Walk/Dash[/Keyboard/space]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Walk
@@ -225,6 +241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockback_time_: 0.25
   walk_speed_: 6
+  dash_power_: 20
 --- !u!1 &7667299644477940873
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,7 +365,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.25}
+  m_Offset: {x: 0, y: 0.41}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -358,7 +375,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 1.5, y: 2.05}
   m_EdgeRadius: 0
 --- !u!114 &288565331580782851
 MonoBehaviour:
